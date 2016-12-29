@@ -20,7 +20,7 @@ function loadGIF() {
     $(".gifHolder").empty();
     sportSelected = $(this).attr("data-name");
     var no_of_records = 10;
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + sportSelected + "&api_key=dc6zaTOxFJmzC&limit=" + no_of_records;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sportSelected + "&api_key=dc6zaTOxFJmzC&limit=" + no_of_records;
     $.ajax({
         url: queryURL,
         method: "GET"
