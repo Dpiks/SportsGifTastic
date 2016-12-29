@@ -1,0 +1,44 @@
+#new_sport_label{
+	display: inline-block;
+	float: left;
+}
+
+#new_sport{
+	display: inline-block;
+	width:400px;
+}
+
+#addSportBtn{
+	display: inline-block;
+	float: right;
+}
+
+#new_sport_row{
+	align-content: center;
+	border: 1px solid black;
+}
+
+.main_area{
+	border: 1px solid black;
+}
+
+.btnHolder,.gifHolder{
+	border: 1px solid black;
+
+
+}
+
+.sport_btn{
+	display: block;
+}
+
+.gif{
+	display: inline-block;
+}
+
+p{
+	display: inline-block;
+	clear: both;
+	float: left;
+}
+
