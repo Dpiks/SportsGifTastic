@@ -16,7 +16,7 @@ function renderButtons() {
 }
 
 function loadGIF() {
-
+$(".gifHolder").show();
     $(".gifHolder").empty();
     sportSelected = $(this).attr("data-name");
     var no_of_records = 10;
@@ -26,22 +26,28 @@ function loadGIF() {
         method: "GET"
     }).done(function(response) {
         for (var i = 0; i < no_of_records; i++) {
+
+            
             var newDiv = $("<div>");
 
-            newDiv.addClass("gif");
+            newDiv.addClass("col-md-6 gif");
 
 
             $(".gifHolder").append(newDiv);
 
-            newDiv.append("<p>Rating:" + response.data[i].rating + "</p>");
+           var newSec=$("<section>");
+           newSec.addClass("image-wrapper");
+           newDiv.append(newSec);
+
+            newSec.append("<p>Rating:" + response.data[i].rating + "</p>");
             var newImg = $("<img>");
             newImg.addClass("gifImg");
-            newImg.data("gif_src", response.data[i].images.downsized.url);
-            newImg.data("still_src", response.data[i].images.downsized_still.url);
+            newImg.data("gif_src", response.data[i].images.fixed_width_downsampled.url);
+            newImg.data("still_src", response.data[i].images.fixed_width_still.url);
             newImg.data("gifON", false);
-            newImg.attr("src", response.data[i].images.downsized_still.url);
+            newImg.attr("src", response.data[i].images.fixed_width_still.url);
 
-            newDiv.append(newImg);
+            newSec.append(newImg);
             // newDiv.append("<img class='gif_img' src='"+response.data[i].images.downsized_still.url+"' alt='gif_of_"+sportSelected+"'>");
 
         }
@@ -86,11 +92,16 @@ function playGIF() {
         var gif_src = $(this).data("gif_src");
 
         $(this).attr("src", gif_src);
+        $(this).css("border","5px solid #54E1E1");
+        $(this).css("border-radius","10px");
+        $(this).css("box-shadow","10px 10px 5px #888888");
         $(this).data("gifON", true);
     } else {
         var still_src = $(this).data("still_src");
 
         $(this).attr("src", still_src);
+        $(this).css("border","none");
+        $(this).css("box-shadow","none");
         $(this).data("gifON", false);
 
     }
@@ -101,7 +112,7 @@ function playGIF() {
 
 
 window.onload = function() {
-
+$(".gifHolder").hide();
     $(document).on("click", ".sport_btn", loadGIF);
     renderButtons();
    $(document).on("click", ".gifImg", playGIF);
