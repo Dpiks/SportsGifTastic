@@ -1,21 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 body{
 	background-color: #0CDADA;
-	font-family: 'Anton', sans-serif;
+	font-family: 'Poiret One', cursive;
 	color:#851900;
+	font-weight: bolder;
 }
 
 .jumbotron{
 	background-image: url("../images/banner.png");
-	height: 300px;
+	height: 100px;
 	margin-top:20px;
 border:solid 5px #FF7B0E;
 box-shadow: 0px 30px 40px rgba(0,0,0,.1);
+align-content: center;
+
 }
+
 
 #heading{
 	margin:0 auto;
-	margin-left: 50%;
+	/*margin-left: 40%;*/
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	display: inline-block;
+	float: right;
+	/*background-color: WHITE;*/
+}
+
+#instructions{
+	background-color: #54E1E1;
+	
+	align-content: center;
+	font-size: 20px;
+	
+
+	
+	border-radius: 10px;
+	margin:0 auto;
+	/*max-width: 960px;*/
+	
+	padding:30px;
+	margin-bottom: 20px;
+
 }
 
 #new_sport_label{
@@ -40,11 +67,12 @@ box-shadow: 0px 30px 40px rgba(0,0,0,.1);
 #new_sport_row{
 	align-content: center;
 	border:solid 5px #54E1E1;
+		font-size: 15px;
 
-	background-color: #FFA75F;
+	/*background-color: #FFA75F;*/
 	border-radius: 10px;
 	margin:0 auto;
-	max-width: 960px;
+	/*max-width: 960px;*/
 	
 	padding:30px;
 }
@@ -73,10 +101,10 @@ box-shadow: 0px 30px 40px rgba(0,0,0,.1);
 }
 
 .sport_btn{
-	display: block;
+	/*display: block;
 	    margin: 0 auto;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 10px;*/
 }
 
 .gif{

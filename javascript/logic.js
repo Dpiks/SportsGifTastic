@@ -8,7 +8,7 @@ function renderButtons() {
 
     for (var i = 0; i < sportsList.length; i++) {
         var newButton = $("<button>");
-        newButton.addClass("sport_btn");
+        newButton.addClass("btn-block sport_btn");
         newButton.attr("data-name", sportsList[i]);
         newButton.text(sportsList[i]);
         $(".btnHolder").append(newButton);
@@ -76,7 +76,7 @@ $(".addSportBtn").on("click", function() {
     var newSportToBeAdded = $("#new_sport").val().trim();
     if (newSportToBeAdded) {
         var newButton = $("<button>");
-        newButton.addClass("sport_btn");
+        newButton.addClass("btn-block sport_btn");
         newButton.attr("data-name", newSportToBeAdded);
         newButton.text(newSportToBeAdded);
         $(".btnHolder").append(newButton);
